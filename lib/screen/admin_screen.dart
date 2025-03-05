@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screen/addGame_screen.dart';
+import 'package:flutter_application_1/screen/addPitch_screen.dart';
 
 void main() {
   runApp(AdminScreen());
@@ -27,7 +28,15 @@ class MyHomePage extends StatelessWidget {
         MaterialPageRoute(builder: (context) => const AddGameScreen()),
       
       );
-    }else{
+    }
+    else if (option == 'Add Pitch') {
+    // Navigate to AddPitchScreen when "Add Pitch" is selected
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) =>  AddPitchScreen()),
+    );}
+    else{
+
       print('Button pressed: $option');
       // You can add navigation for other screens here.
 
@@ -57,7 +66,7 @@ class MyHomePage extends StatelessWidget {
             ),
             SizedBox(height: 20),
             ElevatedButton(
-              onPressed: () => _handleButtonPress(context, 'Pitch adder screen'),
+              onPressed: () => _handleButtonPress(context, 'Add Pitch'),
               child: Text('Pitch adder Screen'),
             ),
           ],
