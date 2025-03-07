@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screen/addGame_screen.dart';
+import 'package:flutter_application_1/screen/addGamelist_screen.dart';
 import 'package:flutter_application_1/screen/addPitch_screen.dart';
 
 void main() {
@@ -35,6 +36,12 @@ class MyHomePage extends StatelessWidget {
       context,
       MaterialPageRoute(builder: (context) =>  AddPitchScreen()),
     );}
+    else if (option == 'Gamelist screen') {
+      Navigator.push(
+         context,
+         MaterialPageRoute(builder: (context) => GameListScreen()),
+      );
+    }
     else{
 
       print('Button pressed: $option');
